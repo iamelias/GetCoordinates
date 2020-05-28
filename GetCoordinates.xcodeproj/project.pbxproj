@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		641826E22474794700633FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641826E12474794700633FC8 /* AppDelegate.swift */; };
 		641826E42474794700633FC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641826E32474794700633FC8 /* SceneDelegate.swift */; };
-		641826E62474794700633FC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641826E52474794700633FC8 /* ViewController.swift */; };
+		641826E62474794700633FC8 /* CoordinateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641826E52474794700633FC8 /* CoordinateVC.swift */; };
 		641826E92474794700633FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 641826E72474794700633FC8 /* Main.storyboard */; };
 		641826EC2474794700633FC8 /* GetCoordinates.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 641826EA2474794700633FC8 /* GetCoordinates.xcdatamodeld */; };
 		641826EE2474794E00633FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 641826ED2474794E00633FC8 /* Assets.xcassets */; };
 		641826F12474794E00633FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 641826EF2474794E00633FC8 /* LaunchScreen.storyboard */; };
+		645E05D4247F0DA00081535F /* ShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645E05D3247F0DA00081535F /* ShareController.swift */; };
+		647EFCB82475D0FB003EA9B6 /* ExtCoordinateVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EFCB72475D0FB003EA9B6 /* ExtCoordinateVCView.swift */; };
+		647FA9B4247E25840039F184 /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647FA9B3247E25840039F184 /* ShareVC.swift */; };
+		647FA9B6247E27010039F184 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647FA9B5247E27010039F184 /* TableVC.swift */; };
+		647FA9B8247E2D870039F184 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647FA9B7247E2D870039F184 /* Coordinate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		641826DE2474794700633FC8 /* GetCoordinates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetCoordinates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		641826E12474794700633FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		641826E32474794700633FC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		641826E52474794700633FC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		641826E52474794700633FC8 /* CoordinateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateVC.swift; sourceTree = "<group>"; };
 		641826E82474794700633FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		641826EB2474794700633FC8 /* GetCoordinates.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GetCoordinates.xcdatamodel; sourceTree = "<group>"; };
 		641826ED2474794E00633FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		641826F02474794E00633FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		641826F22474794E00633FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		645E05D3247F0DA00081535F /* ShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareController.swift; sourceTree = "<group>"; };
+		647EFCB72475D0FB003EA9B6 /* ExtCoordinateVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtCoordinateVCView.swift; sourceTree = "<group>"; };
+		647FA9B3247E25840039F184 /* ShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
+		647FA9B5247E27010039F184 /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		647FA9B7247E2D870039F184 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +69,18 @@
 			isa = PBXGroup;
 			children = (
 				641826E12474794700633FC8 /* AppDelegate.swift */,
+				647FA9B3247E25840039F184 /* ShareVC.swift */,
 				641826E32474794700633FC8 /* SceneDelegate.swift */,
-				641826E52474794700633FC8 /* ViewController.swift */,
+				641826E52474794700633FC8 /* CoordinateVC.swift */,
+				645E05D3247F0DA00081535F /* ShareController.swift */,
+				647FA9B5247E27010039F184 /* TableVC.swift */,
+				647EFCB72475D0FB003EA9B6 /* ExtCoordinateVCView.swift */,
 				641826E72474794700633FC8 /* Main.storyboard */,
 				641826ED2474794E00633FC8 /* Assets.xcassets */,
 				641826EF2474794E00633FC8 /* LaunchScreen.storyboard */,
 				641826F22474794E00633FC8 /* Info.plist */,
 				641826EA2474794700633FC8 /* GetCoordinates.xcdatamodeld */,
+				647FA9B7247E2D870039F184 /* Coordinate.swift */,
 			);
 			path = GetCoordinates;
 			sourceTree = "<group>";
@@ -141,10 +156,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				641826E62474794700633FC8 /* ViewController.swift in Sources */,
+				641826E62474794700633FC8 /* CoordinateVC.swift in Sources */,
+				647EFCB82475D0FB003EA9B6 /* ExtCoordinateVCView.swift in Sources */,
+				647FA9B4247E25840039F184 /* ShareVC.swift in Sources */,
 				641826E22474794700633FC8 /* AppDelegate.swift in Sources */,
 				641826EC2474794700633FC8 /* GetCoordinates.xcdatamodeld in Sources */,
+				647FA9B6247E27010039F184 /* TableVC.swift in Sources */,
+				645E05D4247F0DA00081535F /* ShareController.swift in Sources */,
 				641826E42474794700633FC8 /* SceneDelegate.swift in Sources */,
+				647FA9B8247E2D870039F184 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
