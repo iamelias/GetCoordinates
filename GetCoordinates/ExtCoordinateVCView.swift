@@ -11,4 +11,8 @@ import UIKit
 
 extension CoordinateVC {
     
+    func editView() {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
 }

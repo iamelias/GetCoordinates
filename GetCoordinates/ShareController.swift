@@ -11,6 +11,6 @@ import Foundation
 
 class ShareController: UITabBarController {
     var passedString = ""
-    
-    
+    var allLocations: [Coordinate] = []
+    var selectedLocation: Coordinate!
 }
