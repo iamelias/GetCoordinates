@@ -80,11 +80,16 @@ class CoordinateVC: UIViewController {
     }
     
     func createAnnotation(item: MKPlacemark) {
+        let stringCoordinates = convertDegreesToString(coordinates: (item.coordinate.latitude, item.coordinate.longitude))
         let annotation = MKPointAnnotation()
         annotation.title = item.name ?? "Nil"
-        annotation.subtitle = "latitude: \(item.coordinate.latitude), longitude: \(item.coordinate.longitude)"
+        annotation.subtitle = "latitude: \(stringCoordinates.0), longitude: \(stringCoordinates.1)"
         annotation.coordinate = item.coordinate
         mapView.addAnnotation(annotation)
+    }
+    
+    func convertDegreesToString(coordinates: (lat: CLLocationDegrees, lon: CLLocationDegrees)) -> (String,String) {
+        return("\(Float(coordinates.lat))","\(Float(coordinates.lon))") //converting Tuple of CLLocationDegrees to Tuple of String
     }
     
     func saveCoordinate(item: MKPlacemark) {
