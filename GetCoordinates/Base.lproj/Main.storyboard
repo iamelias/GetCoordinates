@@ -22,6 +22,17 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYV-pU-4fd">
+                                <rect key="frame" x="281" y="633" width="78" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="HqY-dq-wni"/>
+                                    <constraint firstAttribute="width" constant="78" id="KsY-e5-NM6"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="LocationSymbol4"/>
+                                <connections>
+                                    <action selector="centerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H2U-6Y-i8y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -29,8 +40,10 @@
                             <constraint firstItem="UpZ-oI-uHo" firstAttribute="leading" secondItem="k2y-MM-Z3O" secondAttribute="leading" id="2vL-LC-oop"/>
                             <constraint firstItem="UpZ-oI-uHo" firstAttribute="trailing" secondItem="k2y-MM-Z3O" secondAttribute="trailing" id="BeK-jI-IRi"/>
                             <constraint firstItem="k2y-MM-Z3O" firstAttribute="top" secondItem="UpZ-oI-uHo" secondAttribute="top" id="FBe-ht-O08"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bYV-pU-4fd" secondAttribute="trailing" constant="16" id="L4M-ya-ThL"/>
                             <constraint firstItem="k2y-MM-Z3O" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cxm-eq-qT1"/>
                             <constraint firstItem="k2y-MM-Z3O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hZu-D8-8jC"/>
+                            <constraint firstItem="bYV-pU-4fd" firstAttribute="top" secondItem="k2y-MM-Z3O" secondAttribute="bottom" constant="-96" id="hmn-I4-KVM"/>
                             <constraint firstItem="k2y-MM-Z3O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nSR-LY-6XG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -156,6 +169,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LocationSymbol4" width="276" height="276"/>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
     </resources>

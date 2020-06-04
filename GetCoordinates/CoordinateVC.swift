@@ -86,6 +86,9 @@ class CoordinateVC: UIViewController {
             self.mapView.setRegion(region, animated: true)
         }
     }
+    @IBAction func centerButton(_ sender: Any) {
+        print("Center Button Tapped")
+    }
     
     func createAnnotation(item: MKPlacemark) {
         let stringCoordinates = convertDegreesToString(coordinates: (item.coordinate.latitude, item.coordinate.longitude))
