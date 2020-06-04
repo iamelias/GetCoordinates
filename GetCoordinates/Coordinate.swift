@@ -9,10 +9,10 @@
 import Foundation
 
 struct Coordinate {
-    var latitude: Double = 0
-    var longitude: Double = 0
+    var latitude: String = ""
+    var longitude: String = ""
     var name: String = ""
     var address: String = ""
-    //let date: Date?
+    var date = Date()
     
 }

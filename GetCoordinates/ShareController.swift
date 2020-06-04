@@ -8,9 +8,13 @@
 
 import UIKit
 import Foundation
+import MapKit
+import CoreData
 
 class ShareController: UITabBarController {
-    var passedString = ""
     var allLocations: [Coordinate] = []
     var selectedLocation: Coordinate!
+    var selected: [MKAnnotation] = []
+    var sharedContext: NSManagedObjectContext?
+    var coreLocations: [CoreCoordinate] = []
 }

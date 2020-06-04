@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class CoordinateVC: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
@@ -18,6 +19,7 @@ class CoordinateVC: UIViewController {
     @IBOutlet weak var lonLabel: UILabel!
     
     let locationManager = CLLocationManager()
+    let context = DatabaseController.persistentStoreContainer().viewContext
     var selectedAnnotation: MKAnnotation?
     var nearbyLocation: [MKPlacemark] = []
     var savedCoordinates: [Coordinate] = []
@@ -25,15 +27,21 @@ class CoordinateVC: UIViewController {
     var tab: ShareController {
         return tabBarController as! ShareController
     }
+    var passingCoordinates: [Coordinate] = []
+    //var annotationsArray: [MKAnnotations] = []
+    
+    var locations: [CoreCoordinate] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpDelegates()
         editView()
+        
+        fetchCoreLocation()
+        tab.sharedContext = context
+        tab.coreLocations = locations
     }
-    override func viewDidAppear(_ animated: Bool) {
-        tab.passedString = "Elias"
-    }
+    
     func setUpDelegates() {
         mapView.delegate = self
         searchBar.delegate = self
@@ -94,18 +102,45 @@ class CoordinateVC: UIViewController {
     
     func saveCoordinate(item: MKPlacemark) {
         var coordinate = Coordinate()
-        coordinate.latitude = item.coordinate.latitude
-        coordinate.longitude = item.coordinate.longitude
+        coordinate.latitude = "\(item.coordinate.latitude)"
+        coordinate.longitude = "\(item.coordinate.longitude)"
         coordinate.name = item.name ?? "No Name"
         coordinate.address = item.title ?? "No Address"
-       // coordinate.address = item.subtitle ?? "No Address"
         appendCoordinate(coordinate: coordinate)
-        
     }
     
     func appendCoordinate(coordinate: Coordinate) {
         savedCoordinates.append(coordinate)
 }
+    
+    //MARK: CORE DATA
+
+    func fetchCoreLocation() {
+        let locationRequest: NSFetchRequest<CoreCoordinate> = CoreCoordinate.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: true)
+        locationRequest.sortDescriptors = [sortDescriptor]
+        
+        do {
+            locations = try context.fetch(locationRequest)
+        }
+        catch {
+            print("Unable to fetch")
+        }
+    }
+    
+    func saveCoreData(location: Coordinate) -> CoreCoordinate {
+        let coordinate = CoreCoordinate(context: context)
+        coordinate.name = location.name
+        coordinate.address = location.address
+        coordinate.creationDate = Date()
+        coordinate.latitude = location.latitude
+        coordinate.longitude = location.longitude
+        
+        DatabaseController.saveContext()
+        
+        return coordinate
+    }
+    
 }
 
 extension CoordinateVC: MKMapViewDelegate {
@@ -131,6 +166,19 @@ extension CoordinateVC: MKMapViewDelegate {
         }
         return view
     }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        var coordinate = Coordinate()
+        let convertedTuple = convertDegreesToString(coordinates: (view.annotation!.coordinate.latitude, view.annotation!.coordinate.longitude))
+                
+        coordinate.name = (view.annotation?.title ?? "Nil") ?? "Nil"
+        coordinate.latitude = convertedTuple.0
+        coordinate.longitude = convertedTuple.1
+        passingCoordinates.append(coordinate)
+        let coreCoordinate = saveCoreData(location: coordinate)
+        tab.coreLocations.append(coreCoordinate)
+    }
 }
 
 extension CoordinateVC: UISearchBarDelegate {
@@ -153,4 +201,3 @@ extension CoordinateVC: UISearchBarDelegate {
 
 extension CoordinateVC: CLLocationManagerDelegate {
 }
-

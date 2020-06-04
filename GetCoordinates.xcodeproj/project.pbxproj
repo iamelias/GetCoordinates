@@ -15,6 +15,7 @@
 		641826EE2474794E00633FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 641826ED2474794E00633FC8 /* Assets.xcassets */; };
 		641826F12474794E00633FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 641826EF2474794E00633FC8 /* LaunchScreen.storyboard */; };
 		645E05D4247F0DA00081535F /* ShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645E05D3247F0DA00081535F /* ShareController.swift */; };
+		6468AF942486121600F1339E /* DataBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468AF932486121600F1339E /* DataBaseController.swift */; };
 		647EFCB82475D0FB003EA9B6 /* ExtCoordinateVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647EFCB72475D0FB003EA9B6 /* ExtCoordinateVCView.swift */; };
 		647FA9B4247E25840039F184 /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647FA9B3247E25840039F184 /* ShareVC.swift */; };
 		647FA9B6247E27010039F184 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647FA9B5247E27010039F184 /* TableVC.swift */; };
@@ -32,6 +33,7 @@
 		641826F02474794E00633FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		641826F22474794E00633FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		645E05D3247F0DA00081535F /* ShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareController.swift; sourceTree = "<group>"; };
+		6468AF932486121600F1339E /* DataBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseController.swift; sourceTree = "<group>"; };
 		647EFCB72475D0FB003EA9B6 /* ExtCoordinateVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtCoordinateVCView.swift; sourceTree = "<group>"; };
 		647FA9B3247E25840039F184 /* ShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
 		647FA9B5247E27010039F184 /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				641826F22474794E00633FC8 /* Info.plist */,
 				641826EA2474794700633FC8 /* GetCoordinates.xcdatamodeld */,
 				647FA9B7247E2D870039F184 /* Coordinate.swift */,
+				6468AF932486121600F1339E /* DataBaseController.swift */,
 			);
 			path = GetCoordinates;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6468AF942486121600F1339E /* DataBaseController.swift in Sources */,
 				641826E62474794700633FC8 /* CoordinateVC.swift in Sources */,
 				647EFCB82475D0FB003EA9B6 /* ExtCoordinateVCView.swift in Sources */,
 				647FA9B4247E25840039F184 /* ShareVC.swift in Sources */,
