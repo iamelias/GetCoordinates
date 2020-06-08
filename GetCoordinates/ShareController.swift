@@ -11,6 +11,8 @@ import Foundation
 import MapKit
 import CoreData
 
+let locationNotificationKey = "selected.location.key"
+
 class ShareController: UITabBarController {
     var allLocations: [Coordinate] = []
     var selectedLocation: Coordinate!

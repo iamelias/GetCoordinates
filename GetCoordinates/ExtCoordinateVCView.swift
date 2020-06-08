@@ -14,11 +14,4 @@ extension CoordinateVC {
     func editView() {
         navigationController?.navigationBar.isHidden = true
     }
-    
-    func createLocationButton() {
-        var locationButton = UIButton(type: .custom)
-        locationButton.backgroundColor = .white
-        
-    }
-    
 }

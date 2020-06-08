@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class TableVC: UIViewController {
     var newString = ""
@@ -50,7 +51,14 @@ extension TableVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let name = Notification.Name(rawValue: locationNotificationKey) //locationNotificationKey is a global variable declared in ShareController.swift
+        
+        let coordinate = "<\(locations[indexPath.row].latitude ?? "nil"), \(locations[indexPath.row].longitude ?? "nil")>"
+        
+        NotificationCenter.default.post(name: name, object: nil, userInfo: ["location": coordinate])
+        
         tableView.deselectRow(at: indexPath, animated: true)
+        tabBarController?.selectedIndex = 0
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

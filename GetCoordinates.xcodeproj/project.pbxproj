@@ -70,6 +70,7 @@
 		641826E02474794700633FC8 /* GetCoordinates */ = {
 			isa = PBXGroup;
 			children = (
+				64D843E5248D6C3600829424 /* Model */,
 				641826E12474794700633FC8 /* AppDelegate.swift */,
 				647FA9B3247E25840039F184 /* ShareVC.swift */,
 				641826E32474794700633FC8 /* SceneDelegate.swift */,
@@ -86,6 +87,13 @@
 				6468AF932486121600F1339E /* DataBaseController.swift */,
 			);
 			path = GetCoordinates;
+			sourceTree = "<group>";
+		};
+		64D843E5248D6C3600829424 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

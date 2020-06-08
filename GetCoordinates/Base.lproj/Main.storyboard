@@ -28,7 +28,7 @@
                                     <constraint firstAttribute="height" constant="74" id="HqY-dq-wni"/>
                                     <constraint firstAttribute="width" constant="78" id="KsY-e5-NM6"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="LocationSymbol4"/>
+                                <state key="normal" backgroundImage="noBorderLocation1"/>
                                 <connections>
                                     <action selector="centerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H2U-6Y-i8y"/>
                                 </connections>
@@ -169,8 +169,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LocationSymbol4" width="276" height="276"/>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="noBorderLocation1" width="89.333335876464844" height="89.333335876464844"/>
     </resources>
 </document>
