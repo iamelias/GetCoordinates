@@ -28,9 +28,9 @@ class CoordinateVC: UIViewController {
         return tabBarController as! ShareController
     }
     var passingCoordinates: [Coordinate] = []
-    //var annotationsArray: [MKAnnotations] = []
     var searchNotification = Notification.Name(rawValue: locationNotificationKey)
     var locations: [CoreCoordinate] = []
+    var returnedLocationName: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,12 +67,13 @@ class CoordinateVC: UIViewController {
             print("nil in catchLocation")
             return
         }
+        
+        if let name = notification.userInfo!["name"] {
+            returnedLocationName = name as? String ?? ""
+            print(name)
+        }
+       
         searchBar.text = location as? String ?? ""
-        searchBarSearchButtonClicked(searchBar)
-    }
-    
-    @objc func setupSearch(notification: NSNotification) {
-        searchBar.text = "New York"
         searchBarSearchButtonClicked(searchBar)
     }
     
@@ -124,7 +125,13 @@ class CoordinateVC: UIViewController {
     func createAnnotation(item: MKPlacemark) {
         let stringCoordinates = convertDegreesToString(coordinates: (item.coordinate.latitude, item.coordinate.longitude))
         let annotation = MKPointAnnotation()
+        if returnedLocationName == nil {
         annotation.title = item.name ?? "Nil"
+        }
+        else if returnedLocationName != nil {
+            annotation.title = returnedLocationName
+            returnedLocationName = nil
+        }
         annotation.subtitle = "latitude: \(stringCoordinates.0), longitude: \(stringCoordinates.1)"
         annotation.coordinate = item.coordinate
         mapView.addAnnotation(annotation)

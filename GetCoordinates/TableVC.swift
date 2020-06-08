@@ -55,7 +55,7 @@ extension TableVC: UITableViewDelegate, UITableViewDataSource {
         
         let coordinate = "<\(locations[indexPath.row].latitude ?? "nil"), \(locations[indexPath.row].longitude ?? "nil")>"
         
-        NotificationCenter.default.post(name: name, object: nil, userInfo: ["location": coordinate])
+        NotificationCenter.default.post(name: name, object: nil, userInfo: ["location": coordinate, "name": locations[indexPath.row].name ?? "no name"])
         
         tableView.deselectRow(at: indexPath, animated: true)
         tabBarController?.selectedIndex = 0
