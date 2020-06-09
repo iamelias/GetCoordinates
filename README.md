@@ -11,7 +11,7 @@ In tab1, the user enters a location in the search bar. The input string is run t
 
 **Select below for larger clearer image**
 <p float="left">
-<img src = "Images/ScreenShot1.png" width="100" height="200">
+<img src = "Images/ScreenShot1.PNG" width="100" height="200">
 <img src = "Images/ScreenShot2.PNG" width="100" height="200">
 <img src = "Images/ScreenShot3.PNG" width="100" height="200">
 <img src = "Images/ScreenShot4.PNG" width="100" height="200">
